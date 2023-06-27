@@ -1,38 +1,277 @@
-.App {
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #fbfbf8;}
+
+.container {
+  width: 70vw;
+  margin: 2% auto;
+  padding: 2rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+h1 {
   text-align: center;
+  color: #0f2bfa;
+  font-size: 3.5rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  text-align: left;
+  color: #333;
+  font-size: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+input[type="text"]{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.6rem;
+}
+
+button[type="submit"] {
+  margin-top: 1rem;
+  height: 4rem;
+  border-radius: 0.8rem;
+  
+}
+
+
+button {
+  width: 100%;
+  background-color: #7be4da;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #7be4d94b;
+}
+
+button:active {
+  background-color: #7be4d925;
+  color: cadetblue;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.task-container {
+  display: flex;
+  align-items: baseline;
+}
+
+li {
+  padding: 0.5rem 0;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+li.deleted {
+  display: none;
+}
+
+.boton-delete {
+  background-color: crimson;
+  margin-left: 0.5em;
+  border-radius: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  margin-right: 0.5rem;
+
+}
+
+.boton-delete:hover {
+  background-color: #dc143c7d;
+}
+
+.boton-delete:active {
+  background-color: #dc143c59;
+  color: crimson;
+}
+
+.completed span {
+  text-decoration: line-through;
+}
+
+.boton-completar{
+  background-color: green;
+  margin-left: 0.5em;
+  border-radius: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+
+}
+
+.boton-completar:hover{
+  background-color: #0080009c;
+}
+
+.boton-completar:active{
+  background-color: #00800059;
+  color: green;
+}
+
+
+.boton-editar{
+  background-color: #33b9d7;
+  border-radius: 0.5rem;
+  text-align: center;
+  margin: 0 0.8rem 0 0.3rem;
+}
+
+.boton-editar:hover{
+  background-color: #33b9d7b3;
+}
+
+.boton-editar:active{
+  background-color: #33b9d759;
+  color: #33b9d7;
+
+}
+
+
+.containerEdit{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.boton-guardar{
+  width: auto;
+  height: 2rem;
+  margin: 0;
+  background-color: green;
+  border-radius: 0.3rem;
+  text-align: center;
+  margin: 0 0.8rem 0 0.3rem;
+}
+
+.boton-guardar:hover{
+  background-color: #008000b3;
+}
+
+.boton-guardar:active{
+  background-color: #00800059;
+  color: green;
+
+}
+
+.boton-cancelar{
+  width: auto;
+  height: 2rem;
+  margin: 0 0.4rem 0 0;
+  background-color: crimson;
+  border-radius: 0.3rem;
+  text-align: center;
+  margin: 0 0.8rem 0 0.3rem;
+}
+
+.boton-cancelar:hover{
+  background-color: #dc143c7d;
+}
+
+.boton-cancelar:active{
+  background-color: #dc143c59;
+  color: crimson;
+
+}
+
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  margin-top: 1rem;
+  justify-content: flex-end;
+}
+
+.buttonf {
+  border-radius: 0.3rem;
+  padding: 0.5rem 1rem;
+  border: none;
   color: white;
+  font-weight: bold;
+  cursor: pointer;
+  width: auto;
+
 }
 
-.App-link {
-  color: #61dafb;
+.button-all {
+  background-color: blue;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button-all:hover {
+  background-color: #475cff82;
+}
+
+.button-all:active {
+  background-color: #475cff59;
+  color: #0f2bfa;
+}
+
+
+.button-pending {
+  background-color: orange;
+}
+
+.button-pending:hover {
+  background-color: #ffa500a6;
+}
+
+.button-pending:active {
+  background-color: #ffa5005c;
+  color: coral;
+}
+
+.button-completed {
+  background-color: green;
+}
+
+.button-completed:hover {
+  background-color: #008000a1;
+}
+
+.button-completed:active {
+  background-color: #00800059;
+  color: green;
+}
+
+.containerCategory{
+  margin-right: 1rem;
+  margin-left: 1rem;
+  font-weight: bold;
+  color: #093d48;
+}
+
+
+.pInicio{
+  padding: 0;
+  margin: 0 1rem 0 0;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.container-task-dates{
+  display: flex;
 }
